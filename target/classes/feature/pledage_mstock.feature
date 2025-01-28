@@ -1,4 +1,6 @@
     Feature: Verify the pledge mStock modules
+    Background: 
+    @Mstcokmodule
     Scenario: Verify the pledge-shares page loads successfully
     Given I am on the pledge-shares page
     When I enter a mobile number and click on the "Open your demat account" button
@@ -11,7 +13,7 @@
     
     
     #******************************************https://www.mstock.com/sem-landing/brokerage-savings**********************************
-    
+   
      Scenario: Verify the brokerage-savings page loads successfully.
     Given Useron the brokerage-savings page.
     When enter a mobile number and click on the "Open your demat account" button.

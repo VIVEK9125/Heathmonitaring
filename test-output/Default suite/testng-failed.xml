@@ -6,7 +6,7 @@
       <class name="runner.runner_zero">
         <methods>
           <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="0 1"/>
+          <include name="runScenario" invocation-numbers="8"/>
           <include name="tearDownClass"/>
         </methods>
       </class> <!-- runner.runner_zero -->

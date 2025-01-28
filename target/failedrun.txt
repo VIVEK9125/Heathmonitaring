@@ -1,1 +1,1 @@
-file:src/main/resources/feature/pledage_mstock.feature:2:15
+file:src/main/resources/feature/pledage_mstock.feature:17
