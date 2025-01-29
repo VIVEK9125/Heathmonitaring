@@ -4,12 +4,12 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.internal.ant.AntReporterConfig.Property;
 
 public class Refer_Learn 
 {
@@ -75,11 +75,12 @@ public class Refer_Learn
              System.err.println("ERROR WHILE WAITING FOR THE PAGE TO LOAD: " + e.getMessage());
          }
     }
-    public void enterusername() {
+    public void enterusername() throws InterruptedException {
+    	Thread.sleep(2000);
     	 Username.sendKeys("9075794960");
     }
     public void enterpass() {
-    	Password.sendKeys("Vivek@91255");
+    	Password.sendKeys("Vivek@91255",Keys.ENTER);
     }
     public void loginbtn() {
     	loginbtn.click();

@@ -21,15 +21,17 @@ public class Refer_And_learn {
 	}
 
 	@When("the user enters valid credentials")
-	public void the_user_enters_valid_credentials() {
+	public void the_user_enters_valid_credentials() throws InterruptedException {
 	    Refer_learn.enterusername();
 	    Refer_learn.enterpass();
+	    Thread.sleep(1000);
 	   
 	}
 
 	@When("clicks the login button")
 	public void clicks_the_login_button() {
-		 Refer_learn.loginbtn();
+		// Refer_learn.loginbtn();
+		System.out.println("hellow");
 	}
 
 	@When("Entering the valid otp")
@@ -39,7 +41,8 @@ public class Refer_And_learn {
 	}
 
 	@Then("the user should be redirected to the dashboard")
-	public void the_user_should_be_redirected_to_the_dashboard() {
+	public void the_user_should_be_redirected_to_the_dashboard() throws InterruptedException {
+		Thread.sleep(1000);
 		Refer_learn.clkcontineus();
 	}
 
