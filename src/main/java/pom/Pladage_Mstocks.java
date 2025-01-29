@@ -3,6 +3,7 @@ package pom;
 import static org.testng.Assert.assertTrue;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -10,7 +11,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Pladage_Mstocks 
@@ -55,22 +55,46 @@ public class Pladage_Mstocks
 		PageFactory.initElements(driver, this);
 		
 	}
-	 public String featchtitle() {
+ public void mainUrl() {
+	 
+	 try {
+         // URL to test
+         String URL = "https://www.mstock.com/sem-landing/pledge-shares";
+
+         // Start measuring time
+         long startTime = System.currentTimeMillis();
+
+         // Navigate to the page
+         driver.get(URL);
+         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+
+         // Wait for the page to load completely
+         JavascriptExecutor js=(JavascriptExecutor)driver;
+         while (!js.executeScript("return document.readyState").toString().equals("complete")) {
+             Thread.sleep(100); // Check every 100ms
+         }
+
+         // End measuring time
+         long endTime = System.currentTimeMillis();
+
+         // Calculate load time
+         long loadTime = endTime - startTime;
+         System.out.println("IPO PAGE LOADED IN: " + loadTime + " ms");
+     } catch (InterruptedException e) {
+         System.err.println("ERROR WHILE WAITING FOR THE PAGE TO LOAD: " + e.getMessage());
+     }
+ }
+	 public String MStocktitle() {
 			String verifytitle =driver.getTitle();
 			
 			return verifytitle;
 	
 	 }
-	 public String featchURL() {
+	 public String MStockURL() {
 		String verifyURL = driver.getCurrentUrl();
 		return verifyURL;
 	 }
-	 public void verifylogo() {
-		 logo.click();
-		 wait.until(ExpectedConditions.invisibilityOf(Enterno));
-		 
-		
-	 }
+	 
      public void Enter() throws InterruptedException  {
     	 
     	 Enterno.sendKeys("9284267915");

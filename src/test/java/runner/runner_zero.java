@@ -6,10 +6,11 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 		features={"C:\\Users\\vivek.nityo\\git\\New folder\\Heathmonitaring\\src\\main\\resources\\feature"},
 		glue= {"steps"},
-		plugin= {"pretty", "html:target/amazon/report.html","rerun:target/failedrun.txt"}
-		//tags="@priority3"
+		plugin= {"pretty"},
+		publish=true
+		//tags="@Brokage_saving"
 		//monochrome = true,
-		//publish=true
+		
 		//tags= "@Mstcokmodule"
 		
 		
@@ -18,8 +19,6 @@ import io.cucumber.testng.CucumberOptions;
 		
 		)
 
-public class runner_zero extends AbstractTestNGCucumberTests{
-
-	
-	
+public class runner_zero extends AbstractTestNGCucumberTests
+{
 }

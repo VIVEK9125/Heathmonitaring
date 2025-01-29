@@ -29,7 +29,7 @@ public class ApplicationHooks
 		driver.manage().window().maximize();
 	}
 	@After(order=2)
-	public void helthmonitoring(Scenario scenario){
+	public void teardown(Scenario scenario){
 		boolean Screnshotfail = scenario.isFailed();
 		if(Screnshotfail) {
 			String verifyname = scenario.getName();
