@@ -7,7 +7,7 @@ import io.cucumber.testng.CucumberOptions;
 		
 		features={"C:\\Users\\vivek.nityo\\git\\New folder\\Heathmonitaring\\src\\main\\resources\\Refer and learn"},
 		glue= {"steps"},
-		plugin= {"pretty"},
+		plugin= {"pretty","html:tatrget/cucumber-html-report.html"},
 		publish=true
 		
 		

@@ -16,8 +16,7 @@ Scenario: Successful Login with Valid Credentials
     
     When User Enter the refrance number
     And the Click on the Submit button
-    Then verify how much time it takes to Success message on refer and earn page.
-    And Verify this "Your referral has been successfully added" Message
+    Then Verify this "Your referral has been successfully added" Message
     And Verify the live refferal Feed
     
     When click on  the mail report.

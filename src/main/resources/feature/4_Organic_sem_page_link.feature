@@ -1,7 +1,7 @@
 Feature: Verify Trading Account multiple page
 
  @priority1
-   Scenario: Verify the brokerage-calculato page is loads successfully
+   Scenario: Verify the brokerage-calculator page is loads successfully
    Given I am on the brokerage-calculato Page.
    Then verify the title of the page should "brokerage-calculato"
    And Page URL should "https://www.mstock.com/brokerage-calculator".

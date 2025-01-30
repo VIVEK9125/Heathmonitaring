@@ -39,9 +39,9 @@ public class ApplicationHooks
 			scenario.attach(bitevalue, "image/png/jpge", updatename);
 		}
 	}
-	@After(order=1)
-	public void closewindow() {
-		driver.quit();
-	}
+//	@After(order=1)
+//	public void closewindow() {
+//		driver.quit();
+//	}
 
 }

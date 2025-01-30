@@ -114,7 +114,7 @@ public class Pladage_Mstocks
 //    	 wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 //    	 wait.until(ExpectedConditions.invisibilityOf(Enterno));
     	 Thread.sleep(2000);
-     	driver.navigate().back();
+     	//driver.navigate().back();
      }
          public void Scrolling() {
         	
