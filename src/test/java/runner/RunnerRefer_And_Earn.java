@@ -5,17 +5,14 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
 		
-		features={"C:\\Users\\vivek.nityo\\git\\New folder\\Heathmonitaring\\src\\main\\resources\\Refer and learn"},
+		features={"src\\main\\resources\\Refer and Earn"},
 		glue= {"steps"},
 		plugin= {"pretty","html:tatrget/cucumber-html-report.html"},
 		publish=true
-		
-		
-		
-		
-		
+		,tags="@sharelink"
+	
 		)
 
-public class RunnerRefer_And_learnn extends AbstractTestNGCucumberTests{
+public class RunnerRefer_And_Earn extends AbstractTestNGCucumberTests{
 
 }

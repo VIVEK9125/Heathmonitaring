@@ -6,14 +6,14 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import page_factory.DriverFactory;
-import pom.Feature_and_option;
-import pom.Refer_Learn;
+import pom.Refer_earn;
 
-public class Refer_And_learn {
+public class Refer_And_Earn {
 	
-	Refer_Learn Refer_learn = new Refer_Learn(DriverFactory.getDriver());
+	Refer_earn Refer_earn = new Refer_earn(DriverFactory.getDriver());
 	WebDriver driver = DriverFactory.getDriver();
 	String URL = "https://trade.mirae-asset.co.in/#/login";
+	 String ReferralURL = "https://ekyc.miraeassetcm.com/Register-with-us?ref=REF1707585%26refsrc=2";
 	
 	@Given("the user is on the login page")
 	public void the_user_is_on_the_login_page() throws InterruptedException {
@@ -24,9 +24,9 @@ public class Refer_And_learn {
 
 	@When("the user enters valid credentials")
 	public void the_user_enters_valid_credentials() throws InterruptedException {
-		Refer_learn.pophandle();
-	    Refer_learn.enterusername();
-	    Refer_learn.enterpass();
+		Refer_earn.pophandle();
+		Refer_earn.enterusername();
+		Refer_earn.enterpass();
 	    Thread.sleep(1000);
 	   
 	}
@@ -46,12 +46,12 @@ public class Refer_And_learn {
 	@Then("the user should be redirected to the dashboard")
 	public void the_user_should_be_redirected_to_the_dashboard() throws InterruptedException {
 		Thread.sleep(1000);
-		Refer_learn.clkcontineus();
+		Refer_earn.clkcontineus();
 	}
 
 	@When("the user click on the hamburger.")
 	public void the_user_click_on_the_hamburger() {
-	    Refer_learn.clkhamburger();
+		Refer_earn.clkhamburger();
 	}
 
 	@Then("the side bar should be open")
@@ -61,40 +61,40 @@ public class Refer_And_learn {
 
 	@When("the user click on the {string}")
 	public void the_user_click_on_the(String string) throws InterruptedException {
-	  Refer_learn.clkRefer_learn();
-	  Refer_learn.helpMainPage();
+		Refer_earn.clkRefer_learn();
+		Refer_earn.helpMainPage();
 	}
 
 	@Then("the refer and earn page should be open in new tab")
 	public void the_refer_and_earn_page_should_be_open_in_new_tab() {
-	   Refer_learn.refer_featchurl();
+		Refer_earn.refer_featchurl();
 	}
 
 	@Then("verify how much time it takes to load the refer and earn page.")
 	public void verify_how_much_time_it_takes_to_load_the_refer_and_earn_page() {
-	 Refer_learn.referpageloadtime();
+		Refer_earn.referpageloadtime();
 	}
 
 	@Then("Verify the URL and title")
 	public void verify_the_url_and_title() {
-		Refer_learn.refer_featchurl();
-		Refer_learn.verifytitle();
+		Refer_earn.refer_featchurl();
+		Refer_earn.verifytitle();
 	}
 
 	@When("User Enter the refrance number")
 	public void user_enter_the_refrance_number() throws InterruptedException {
-	 Refer_learn.referralno();
+		Refer_earn.referralno();
 	}
 
 	@When("the Click on the Submit button")
 	public void the_click_on_the_submit_button() throws InterruptedException {
-	  Refer_learn.clkSubmt();
+		Refer_earn.clkSubmt();
 	  Thread.sleep(2000);
 	 
 	}
 	@Then("Verify this {string} Message")
 	public void verify_this_message(String text) {
-		 Refer_learn.verifymessage();
+		Refer_earn.verifymessage();
 		 
 		 try {
 				Thread.sleep(1000);
@@ -102,28 +102,78 @@ public class Refer_And_learn {
 				
 				e.printStackTrace();
 			}
-		    Refer_learn.Scrolling();
+		 Refer_earn.Scrolling();
 	   
 	}
 
 	@Then("Verify the live refferal Feed")
-	public void verify_the_live_refferal_feed() throws InterruptedException {
-		Refer_learn.getlivereferralfeed();
+	public void verify_the_live_refferal_feed() throws InterruptedException  {
+		try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			
+			e.printStackTrace();
+		}
+		Refer_earn.getlivereferralfeed();
 		Thread.sleep(6000);
-		Refer_learn.leaderboard();
+		System.out.println("******************************************************leaderDashboard*************************************************");
+		Refer_earn.leaderboard();
 		Thread.sleep(6000);
-		Refer_learn.getlivereferralfeed();
+		System.out.println("******************************************************getlivereferralfeed*************************************************");
+		Refer_earn.getlivereferralfeed();
 	}
 
 	@When("click on  the mail report.")
-	public void click_on_the_mail_report() {
+	public void click_on_the_mail_report() throws InterruptedException {
+		Refer_earn.Scrolling();
+	   Thread.sleep(1000);
+	   Refer_earn.clkEmailRep();
 	   
 	}
 
 	@Then("Verify Success message {string}")
 	public void verify_success_message(String string) {
+		Refer_earn.verifysuccessfullmsg();
 	    
 	}
+	@When("Copy the link to share it")
+	public void copy_the_link_to_share_it() {
+		
+	   driver.navigate().refresh();
+	   
+	}
+	
+	@When("paste the copied link in a new tab.")
+	public void paste_the_copied_link_in_a_new_tab() throws InterruptedException {
+		Thread.sleep(1000);
+		Refer_earn.clkcopyicon();
+	}
 
+	@Then("the user should be redirected to the registration page.")
+	public void the_user_should_be_redirected_to_the_registration_page() {
+		
+	   Refer_earn.verifycopytext();
+	   
+	}
+	
+	//***************************************************** Share-link************************************
+	
+	
+	@Given("User on the Share link")
+	public void user_on_the_share_link() {
+	   driver.get(ReferralURL);
+	  // Refer_earn.referralpageloadtime();
+	}
+
+	@When("the user Entering the number and click on the get otp button")
+	public void the_user_entering_the_number_and_click_on_the_get_otp_button() {
+	   Refer_earn.enterPhoneNumber();
+	   Refer_earn.clicksubmit();
+	}
+
+	@Then("The user Should be redirect on the Enter OTP page")
+	public void the_user_should_be_redirect_on_the_enter_otp_page() {
+	 Refer_earn.verifyotppage();
+	}
 
 }

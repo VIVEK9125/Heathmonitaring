@@ -1,11 +1,9 @@
 package pom;
 
-import java.awt.SecondaryLoop;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
@@ -13,17 +11,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import io.restassured.RestAssured;
-import io.restassured.response.Response;
+import com.github.javafaker.Faker;
 
-public class Refer_Learn 
+public class Refer_earn 
 {
 	WebDriver driver;
 	private WebDriverWait wait;
 	List<WebElement> links;
+	JavascriptExecutor Jv = (JavascriptExecutor)driver;
 	
 	String referurl = "https://referralapi.mstock.com/Miraereferral/Index/QtaQDxzuf%5E8Lwx6xCN2iw57+4ZWSQ8ot%5EfDXykZ%5EdLQ=";
 	@FindBy(xpath = "//input[@id='username']")
@@ -52,7 +49,7 @@ public class Refer_Learn
 //    private WebElement hamburger;
     
     
-    public Refer_Learn(WebDriver driver) {
+    public Refer_earn(WebDriver driver) {
     	this.driver=driver;
 		PageFactory.initElements(driver, this);
 		
@@ -87,27 +84,7 @@ public class Refer_Learn
              System.err.println("ERROR WHILE WAITING FOR THE PAGE TO LOAD: " + e.getMessage());
          }
     }
-//    public void Loadtime() throws InterruptedException {
-//    	 // URL to test
-//        String URL2 = "https://trade.mirae-asset.co.in/#/login";
-//
-//        // Start measuring time
-//        long startTime = System.currentTimeMillis();
-//
-//        // Navigate to the page
-//        driver.get(URL2);
-//
-//        // Wait for the page to load completely
-//        JavascriptExecutor js=(JavascriptExecutor)driver;
-//        while (!js.executeScript("return document.readyState").toString().equals("complete")) {
-//            Thread.sleep(100); // Check every 100ms
-//            long endTime = System.currentTimeMillis();
-//
-//            // Calculate load time
-//            long loadTime = endTime - startTime;
-//            System.out.println("IPO PAGE LOADED IN: " + loadTime + " ms");
-//        }
-//    }
+
     public void pophandle() {
    	 try {
             //wait.until(ExpectedConditions.visibilityOf(handlepopup));
@@ -189,18 +166,38 @@ public class Refer_Learn
     private WebElement livedata;
     @FindBy(xpath = "//div[@class='leader-detail-block']")
     private WebElement leaderboard;
+    @FindBy(xpath = "(//*[text()=' Email report'])[2]")
+    private WebElement clkEmailRep;
+    @FindBy(xpath = "//p[@id='SendEmail']")
+    private WebElement verfymsg;
+    
+    @FindBy(xpath = "//img[@src='/Content/images/copy-icon.png']")
+    private WebElement clickcopyicon;
     long startTime;
     long endTime;
 //    @FindBy(xpath = "//input[@id='submitbtn']") 
 //    private WebElement Submit;
 //    @FindBy(xpath = "//input[@id='submitbtn']") 
 //    private WebElement Submit;
-
-    public void referralno() throws InterruptedException {
-    	//wait.until(ExpectedConditions.visibilityOf(entrnumbr));
-    	Thread.sleep(2000);
-    	entrnumbr.sendKeys("9256898545");
+//    
+    
+    public void referralno() {
+        String randomIndianPhoneNumber = referralno1();
+       // WebElement phoneNumberField = driver.findElement(By.id("phoneNumber"));
+        entrnumbr.sendKeys(randomIndianPhoneNumber);
     }
+
+    private String referralno1() {
+        // Indian phone numbers start with 7, 8, or 9 and are 10 digits long
+        String[] prefixes = {"7", "8", "9"};
+        String prefix = prefixes[faker.random().nextInt(prefixes.length)];
+        StringBuilder phoneNumber = new StringBuilder(prefix);
+        for (int i = 0; i < 9; i++) {
+            phoneNumber.append(faker.number().digit());
+        }
+        return phoneNumber.toString();
+    }
+    
     public void helpMainPage() throws InterruptedException {
 		Thread.sleep(2000);
 		//Get the list of all open tabs
@@ -241,12 +238,7 @@ public class Refer_Learn
   
  }
     public void getlivereferralfeed() {
-    	try {
-			Thread.sleep(500);
-		} catch (InterruptedException e) {
-		
-			e.printStackTrace();
-		}
+    	
 //    	Response response = RestAssured.get(referurl);
 //    	livedata.sendKeys(response.getBody().asString());
       System.out.println("Data displayed on front end: " + livedata.getText());
@@ -255,4 +247,122 @@ public class Refer_Learn
     public void leaderboard() {
     	System.out.println("Displayed leaderboard data:"+ leaderboard.getText() );
     }
+    public void clkEmailRep() {
+    	clkEmailRep.click();
+    }
+    public void verifysuccessfullmsg() {
+    	String Expected="Your referral status report has been emailed on your registered email id!";
+    	String Actual= verfymsg.getText();
+    	if(Actual.equals(Expected)) {
+    		System.out.println("message is verified:"+Actual);
+    	}
+    	else {
+    		System.out.println("message is not verified:"+ Expected+ " but found: " + Actual);
+    	}
+    }
+    public void ScrollingUp() {
+    	try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			
+			e.printStackTrace();
+		}
+    	 Jv.executeScript("window.scrollBy(0,0)");
+    }
+    public void clkcopyicon() {
+    	try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			
+			e.printStackTrace();
+		}
+    	clickcopyicon.click();
+    }
+    public void verifycopytext() {
+    	String verifytitl = verifycopytext.getText();
+  	System.out.println("Verify the OTP page Title:"+verifytitl);
+    }
+  //***************************************************** Share-link************************************
+    @FindBy(xpath = "//input[@id='MainContent_MobileNumber']")
+    private WebElement Number;
+    @FindBy(xpath = "//input[@type='submit']")
+    private WebElement Submitb;
+    @FindBy(xpath = "//*[text()='Enter mobile number']")
+    private WebElement verifytext;
+    @FindBy(xpath = "//p[text()='Referral link copied to clipboard']")
+    private WebElement verifycopytext;
+    Faker faker = new Faker();
+    public void openreferrallink() {
+    	try {
+            // URL to test
+            String ReferralURL = "https://ekyc.miraeassetcm.com/Register-with-us?ref=REF1707585%26refsrc=2";
+
+            // Start measuring time
+            long startTime = System.currentTimeMillis();
+
+            // Navigate to the page
+            driver.get(ReferralURL);
+            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+
+            // Wait for the page to load completely
+            JavascriptExecutor js=(JavascriptExecutor)driver;
+            while (!js.executeScript("return document.readyState").toString().equals("complete")) {
+                Thread.sleep(100); // Check every 100ms
+            }
+
+            // End measuring time
+            long endTime = System.currentTimeMillis();
+
+            // Calculate load time
+            long loadTime = endTime - startTime;
+            System.out.println("IPO PAGE LOADED IN: " + loadTime + " ms");
+        } catch (InterruptedException e) {
+            System.err.println("ERROR WHILE WAITING FOR THE PAGE TO LOAD: " + e.getMessage());
+        }
+    }
+    public void enterPhoneNumber() {
+    	try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			
+			e.printStackTrace();
+		}
+         String randomIndianPhoneNumber = generatePhoneNumber();
+       // WebElement phoneNumberField = driver.findElement(By.id("phoneNumber"));
+        Number.sendKeys(randomIndianPhoneNumber);
+    }
+
+    private String generatePhoneNumber() {
+        // Indian phone numbers start with 7, 8, or 9 and are 10 digits long
+        String[] prefixes = {"6","7", "8", "9"};
+        String prefix = prefixes[faker.random().nextInt(prefixes.length)];
+        StringBuilder phoneNumber = new StringBuilder(prefix);
+        for (int i = 0; i < 9; i++) {
+            phoneNumber.append(faker.number().digit());
+        }
+        return phoneNumber.toString();
+    }
+    public void clicksubmit() {
+    	try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	Submitb.click();
+    }
+    public void verifyotppage() {
+    	
+    	String expect="Enter mobile number";
+    	String Actualt= verifytext.getText();
+    	if(Actualt.equals(expect)) {
+    		System.out.println("message is verified:"+Actualt);
+    	}
+    	else {
+    		System.out.println("message is not verified:"+ expect+ " but found: " + Actualt);
+    	}
+//    	 String verifytitle = verifytext.getText();
+//      	System.out.println("Verify the OTP page Title:"+verifytitle);
+    }
+    
 }
