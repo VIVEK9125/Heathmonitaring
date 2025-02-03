@@ -3,8 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="HealthMonitoring.HealthMonitoring.AppTest"/>
-      <class name=".NewTest"/>
+      <class name="steps.ApplicationHooks"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

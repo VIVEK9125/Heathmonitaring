@@ -8,11 +8,13 @@ import io.cucumber.testng.CucumberOptions;
 		features={"src\\main\\resources\\Refer and Earn"},
 		glue= {"steps"},
 		plugin= {"pretty","html:tatrget/cucumber-html-report.html","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
-		publish=true
-		,tags="@sharelink"
+		//publish=true
+		tags="@Ledger"
 	
 		)
 
-public class RunnerRefer_And_Earn extends AbstractTestNGCucumberTests{
+
+
+public class OnScreen extends AbstractTestNGCucumberTests {
 
 }
