@@ -7,14 +7,14 @@ import io.cucumber.testng.CucumberOptions;
 		
 		features={"src\\main\\resources\\Refer and Earn"},
 		glue= {"steps"},
-		plugin= {"pretty","html:tatrget/cucumber-html-report.html","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
+		plugin= {"pretty","html:tatrget/cucumber-html-report.html","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 		//publish=true
-		tags="@Ledger"
+		,tags="@IPO_Page"
 	
 		)
 
 
 
-public class OnScreen extends AbstractTestNGCucumberTests {
+public class OnScreen extends AbstractTestNGCucumberTests{
 
 }

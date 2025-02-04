@@ -5,6 +5,7 @@ import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -253,8 +254,8 @@ public class OnScreenPage
     private WebElement Ledger;
     @FindBy(xpath = "//p[text()=' Ledger report related queries? ']")
     private WebElement Ledgerclk;
-    //@FindBy(xpath = "//*[text()='Funds Summary - FAQs']")
-   // private WebElement verifytext;
+    @FindBy(xpath = "//*[text()='Ledger Report - FAQs']")
+    private WebElement verifyledger;
     
     public void clkledger() {
     	Ledger.click();
@@ -273,10 +274,49 @@ public class OnScreenPage
     	// Accept the alert
     	alert.accept();
     }
+    public void verifytitle() {
+    	String verifytitle = verifyledger.getText();
+    	System.out.println("The pop-up title is:"+verifytitle);
+    }
+    
+  //************************************************************Trade History************************************************************ 
+    @FindBy(xpath = "//p[text()='Trade History ']")
+    private WebElement Trade_History;
+    @FindBy(xpath = "//p[text()=' Trade history related queries? ']")
+    private WebElement Trade_history;
+    @FindBy(xpath = "//p[text()='Trade History - FAQ']")
+    private WebElement verifyTrade;
+    
+    public void clkTrade_History() {
+    	Trade_History.click();
+    }
+    public void clk_trade_History() {
+    	Trade_history.click();
+    }
+    public void handle_trade_popup() {
+    	// Switch to the alert
+    	Alert alert = driver.switchTo().alert();
+
+    	// Get the alert text
+    	String alertText = alert.getText();
+    	System.out.println("Alert text: " + alertText);
+
+    	// Accept the alert
+    	alert.accept();
+    }
+    public void verify_trade_title() {
+    	String verifytitle = verifyTrade.getText();
+    	System.out.println("The pop-up title is:"+verifytitle);
+    }
     
     
     //************************************************************IPO************************************************************
     @FindBy(xpath = "//p[text()='IPO']") private WebElement IPO;
+    @FindBy(xpath = "//*[text()='IPO Listing']") private WebElement IPOpage;
+    @FindBy(xpath = "//a[text()=' IPO related queries?']") 
+    private WebElement IPOqueries;
+    @FindBy(xpath = "//p[text()='IPO']") 
+    private WebElement VerifyIPO;
     
     
     
@@ -284,9 +324,49 @@ public class OnScreenPage
     public void clkonIPO() {
     	IPO.click();
     }
-    public void Switchtab() {
+    
+    public void helpnewPage() throws InterruptedException {
+		Thread.sleep(2000);
+		//Get the list of all open tabs
+        ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
+ 
+        // Switch to the new tab
+        driver.switchTo().window(tabs.get(1));
+        
+		System.out.println("HELP MAIN PAGE TITLE IS  :" + driver.getTitle() +"AND HELP PAGE OPEN SUCCESSFULLY");
+		//String helpurl=driver.getCurrentUrl();
+		//System.out.println("HELP CURRENT PAGE URL IS:  "+helpurl);
+		//WebElement jss=driver.findElement(By.xpath("//span[text()=' Write to us here']"));
+		Thread.sleep(2000);
+	}
+    public String  Verifypage() {
     	
+    	String verifypage = IPOpage.getText();
+    	return verifypage;
     }
+    public void clkIPOrelated() {
+    	IPOqueries.click();
+    }
+    
+    public void IPOpagetitile() {
+    	String verifytext =VerifyIPO.getText();
+    	System.out.println(verifytext);
+    }
+    
+    public void helpMainPage() throws InterruptedException {
+		Thread.sleep(2000);
+		//Get the list of all open tabs
+        ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
+ 
+        // Switch to the new tab
+        driver.switchTo().window(tabs.get(0));
+        
+		System.out.println("HELP MAIN PAGE TITLE IS  :" + driver.getTitle() +"AND HELP PAGE OPEN SUCCESSFULLY");
+		//String helpurl=driver.getCurrentUrl();
+		//System.out.println("HELP CURRENT PAGE URL IS:  "+helpurl);
+		//WebElement jss=driver.findElement(By.xpath("//span[text()=' Write to us here']"));
+		Thread.sleep(2000);
+	}
     
 
 
