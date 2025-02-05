@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Feb 4, 2025 05:41:05 PM</span></a>
+<a href="#"><span class="badge badge-primary">Feb 5, 2025 03:03:55 PM</span></a>
 </li>
 </ul>
 </div>
@@ -97,7 +97,7 @@
           <div class="test-detail">
             <p class="name">Verify on Screen modul</p>
             <p class="text-sm">
-              <span>5:41:05 PM</span> / <span>00:00:17:281</span>
+              <span>3:03:56 PM</span> / <span>00:00:14:481</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -106,9 +106,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-fail">Verify on Screen modul</h5>
-<span class='badge badge-success'>02.04.2025 5:41:05 PM</span>
-<span class='badge badge-danger'>02.04.2025 5:41:22 PM</span>
-<span class='badge badge-default'>00:00:17:281</span>
+<span class='badge badge-success'>02.05.2025 3:03:56 PM</span>
+<span class='badge badge-danger'>02.05.2025 3:04:10 PM</span>
+<span class='badge badge-default'>00:00:14:481</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -130,33 +130,17 @@
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="steps.OnScreenStep.the_user_enters_valid_credential()">
+              <div class="step fail-bg" title="steps.OnScreenStep.the_user_enters_valid_credential()">
                 <span>When the user enters valid credential.</span>
       <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="steps.OnScreenStep.clicks_login_button()">
-                <span>And clicks login button.</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="steps.OnScreenStep.entering_valid_otp()">
-                <span>And Entering  valid otp.</span>
-      <div>
-      </div>
-              </div>
-              <div class="step fail-bg" title="steps.OnScreenStep.user_should_be_redirected_to_the_dashboard()">
-                <span>Then user should be redirected to the dashboard.</span>
-      <div>
-        <textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[text()='I understand, continue']"}
+        <textarea disabled class="code-block">org.openqa.selenium.NoAlertPresentException: no such alert
   (Session info: chrome=132.0.6834.110)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.25.0', revision: '8a8aea2337'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0f3cfdae6147fdaeca91888e7f6ef055, findElement {value=//button[text()='I understand, continue'], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.110, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\VIVEK~1.NIT\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52458}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52458/devtoo..., se:cdpVersion: 132.0.6834.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 0f3cfdae6147fdaeca91888e7f6ef055
+Command: [231b541069a17579d701e6a0ad262614, getAlertText {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.110, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\VIVEK~1.NIT\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60916}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60916/devtoo..., se:cdpVersion: 132.0.6834.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 231b541069a17579d701e6a0ad262614
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
@@ -167,18 +151,29 @@ Session ID: 0f3cfdae6147fdaeca91888e7f6ef055
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy27.click(Unknown Source)
-	at pom.OnScreenPage.clkcontineus(OnScreenPage.java:123)
-	at steps.OnScreenStep.user_should_be_redirected_to_the_dashboard(OnScreenStep.java:46)
-	at ✽.user should be redirected to the dashboard.(file:///C:/Users/vivek.nityo/git/New%20folder/Heathmonitaring/src/main/resources/Refer%20and%20Earn/OnScreenScenario.feature:8)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:1190)
+	at pom.OnScreenPage.haldleNotifiaction(OnScreenPage.java:421)
+	at steps.OnScreenStep.the_user_enters_valid_credential(OnScreenStep.java:30)
+	at ✽.the user enters valid credential.(file:///C:/Users/vivek.nityo/git/New%20folder/Heathmonitaring/src/main/resources/Refer%20and%20Earn/OnScreenScenario.feature:5)
 </textarea>
       
+      </div>
+              </div>
+              <div class="step skip-bg" title="steps.OnScreenStep.clicks_login_button()">
+                <span>And clicks login button.</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="steps.OnScreenStep.entering_valid_otp()">
+                <span>And Entering  valid otp.</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="steps.OnScreenStep.user_should_be_redirected_to_the_dashboard()">
+                <span>Then user should be redirected to the dashboard.</span>
+      <div>Step skipped
       </div>
               </div>
               <div class="step skip-bg" title="steps.OnScreenStep.the_user_click_on_hamburger()">
@@ -289,12 +284,12 @@ Session ID: 0f3cfdae6147fdaeca91888e7f6ef055
 <span class="meta">
 <span class='badge log badge-danger'>1</span>
 </span>
-<p class="name">org.openqa.selenium.NoSuchElementException</p>
+<p class="name">org.openqa.selenium.NoAlertPresentException</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>org.openqa.selenium.NoSuchElementException</h4>
+<h4>org.openqa.selenium.NoAlertPresentException</h4>
 <span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -308,11 +303,11 @@ Session ID: 0f3cfdae6147fdaeca91888e7f6ef055
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>17:41:15 PM</td>
+<td>15:04:05 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='8'>Then user should be redirected to the dashboard.</a>
+<a href="#" class="linked" test-id='1' id='5'>When the user enters valid credential.</a>
 <div class="">
-<span class="badge badge-default">Verify on Screen modul.Verify the IPO page.Then user should be redirected to the dashboard.</span>
+<span class="badge badge-default">Verify on Screen modul.Verify the IPO page.When the user enters valid credential.</span>
 </div>
 </td>
 </tr>
@@ -360,7 +355,7 @@ Session ID: 0f3cfdae6147fdaeca91888e7f6ef055
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>17:41:05 PM</td>
+<td>15:03:56 PM</td>
 <td>
 <a href="#" class="linked" test-id='1' id='2'>Verify the IPO page</a>
 <div class="">
@@ -385,13 +380,13 @@ Session ID: 0f3cfdae6147fdaeca91888e7f6ef055
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Feb 4, 2025 05:41:05 PM</h3>
+<h3>Feb 5, 2025 03:03:55 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Feb 4, 2025 05:41:22 PM</h3>
+<h3>Feb 5, 2025 03:04:10 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -462,10 +457,10 @@ Session ID: 0f3cfdae6147fdaeca91888e7f6ef055
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='19%'><b>4</b> steps passed</small></div>
+<div><small data-tooltip='4%'><b>1</b> steps passed</small></div>
 <div>
 <small data-tooltip='4%'><b>1</b> steps failed,
-<b>16</b> skipped, <b data-tooltip='%'>0</b> others
+<b>19</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
 </div>
@@ -481,7 +476,7 @@ Session ID: 0f3cfdae6147fdaeca91888e7f6ef055
 </div></div>
 <script>
 var timeline = {
-"Verify on Screen modul":17.281
+"Verify on Screen modul":14.481
 };
 </script>
 <div class="row">
@@ -518,10 +513,10 @@ warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 4,
+passGrandChild: 1,
 failGrandChild: 1,
 warningGrandChild: 0,
-skipGrandChild: 16,
+skipGrandChild: 19,
 infoGrandChild: 0,
 eventsCount: 5,
 };

@@ -1,6 +1,6 @@
 Feature: Verify Trading Account multiple page
 
- @priority1
+ @brokerage-calculator
    Scenario: Verify the brokerage-calculator page is loads successfully
    Given I am on the brokerage-calculato Page.
    Then verify the title of the page should "brokerage-calculato"
@@ -9,7 +9,7 @@ Feature: Verify Trading Account multiple page
    And Verify how much time takes to load the page.
     
     ######################## equity-trading #######################
-    @priority2
+    @equity-trading
    Scenario: Verify the equity-trading page loads successfully
 
 Given I am on the equity-trading page.
@@ -22,7 +22,7 @@ And validate the page contains a heading "Open Your Demat Account".
 
     
     ##################### ipo ##################
-     @priority3
+     @IPO_Page
    Scenario: Verify the IPO page loads successfully
 
 Given I am on the IPO main page.
@@ -35,7 +35,7 @@ And the Mstock main page URL is "https://www.mstock.com/ipo".
   
    
    ##################### mstock videos ##################
-   @priority4
+   @Mstock_videos_page
   Scenario: Verify the Mstock videos page loads successfully
 
 Given I am on the Mstock videos page.
@@ -48,7 +48,7 @@ And the Organic SEM Open Demat Account page URL is "https://www.mstock.com/video
    
     
     #################### partner page #######################
-     @priority5
+     @partner_page
     Scenario: Verify the partner page loads successfully
 
 Given I am on the partner page.

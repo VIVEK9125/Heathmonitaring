@@ -80,7 +80,7 @@ public class Margin_trading extends propertyReader
 	@When("The user scrolls down and clicks on the tab")
 	public void the_user_scrolls_down_and_clicks_on_the_tab() throws InterruptedException {
 		Margin.clickbkbtn();
-		   Thread.sleep(1000);
+		   Thread.sleep(2000);
 		   Margin.Scrolling();
 	}
 

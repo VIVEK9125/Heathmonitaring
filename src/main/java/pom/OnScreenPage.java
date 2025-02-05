@@ -15,7 +15,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -65,7 +65,7 @@ public class OnScreenPage
 
              // Navigate to the page
              driver.get(OnScreenUrl);
-             driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+             driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
              // Wait for the page to load completely
              JavascriptExecutor js=(JavascriptExecutor)driver;
@@ -99,8 +99,10 @@ public class OnScreenPage
     	Thread.sleep(2000);
     	 Username.sendKeys("9075794960");
     }
-    public void enterpass() {
+    public void enterpass() throws InterruptedException {
+    	Thread.sleep(2000);
     	Password.sendKeys("Vivek@91255",Keys.ENTER);
+    	//Password.sendKeys("Vivek@9125",Keys.ENTER);
     }
     public void loginbtn() {
     	loginbtn.click();
@@ -173,7 +175,7 @@ public class OnScreenPage
     }
     public void Scrolling() {
     	 JavascriptExecutor Jv = (JavascriptExecutor)driver;
-			Jv.executeScript("window.scrollBy(0,600)");
+			Jv.executeScript("window.scrollBy(0,2500)");
     }
     public void clkonquerise() {
     	startTime = System.currentTimeMillis();
@@ -317,12 +319,28 @@ public class OnScreenPage
     private WebElement IPOqueries;
     @FindBy(xpath = "//p[text()='IPO']") 
     private WebElement VerifyIPO;
+    @FindBy(xpath = "//button[@type='button']") 
+    private WebElement arrowbutton;
+    @FindBy(xpath = "//p[text()='Help']") 
+    private WebElement help;
+    @FindBy(xpath = "//*[text()='Quick Links']") 
+    private WebElement gettext;
+    @FindBy(xpath = "//ul[@id=\"listingquery\"]") 
+    private WebElement getcrrentqueires;
     
     
     
-    
-    public void clkonIPO() {
+    public void clkonIPO() throws InterruptedException {
+    	Thread.sleep(2000);
+    	startTime = System.currentTimeMillis();
     	IPO.click();
+        // Wait for the page to load or some element to be visible
+       // WebDriverWait wait = new WebDriverWait(driver, 10);
+              //  .until(ExpectedConditions.visibilityOfElementLocated(By.id("result-element")));
+        endTime = System.currentTimeMillis();
+        long loadTime = endTime - startTime;
+        System.out.println("Load time: " + loadTime + " milliseconds");
+    	
     }
     
     public void helpnewPage() throws InterruptedException {
@@ -334,9 +352,7 @@ public class OnScreenPage
         driver.switchTo().window(tabs.get(1));
         
 		System.out.println("HELP MAIN PAGE TITLE IS  :" + driver.getTitle() +"AND HELP PAGE OPEN SUCCESSFULLY");
-		//String helpurl=driver.getCurrentUrl();
-		//System.out.println("HELP CURRENT PAGE URL IS:  "+helpurl);
-		//WebElement jss=driver.findElement(By.xpath("//span[text()=' Write to us here']"));
+		
 		Thread.sleep(2000);
 	}
     public String  Verifypage() {
@@ -367,6 +383,48 @@ public class OnScreenPage
 		//WebElement jss=driver.findElement(By.xpath("//span[text()=' Write to us here']"));
 		Thread.sleep(2000);
 	}
+    public void Arrowbutton() {
+             arrowbutton.click();
+    }
+    public void helppage() {
+    	startTime = System.currentTimeMillis();
+        help.click();
+        // Wait for the page to load or some element to be visible
+       // WebDriverWait wait = new WebDriverWait(driver, 10);
+              //  .until(ExpectedConditions.visibilityOfElementLocated(By.id("result-element")));
+        endTime = System.currentTimeMillis();
+        long loadTime = endTime - startTime;
+        System.out.println("Load time: " + loadTime + " milliseconds");
+    }
+    public void getCurrentraisequiery() {
+    	String verifydata = getcrrentqueires.getText();
+    	System.out.println(verifydata);
+    }
+    public void help2Page() throws InterruptedException {
+		Thread.sleep(2000);
+		//Get the list of all open tabs
+        ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
+ 
+        // Switch to the new tab
+        driver.switchTo().window(tabs.get(2));
+        
+		System.out.println("HELP MAIN PAGE TITLE IS  :" + driver.getTitle() +"AND HELP PAGE OPEN SUCCESSFULLY");
+		
+		Thread.sleep(2000);
+	}
+    public void Actiondown() {
+    	// Scroll down the page using the Page Down key
+        Actions actions = new Actions(driver);
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
+    }
+    public void haldleNotifiaction() {
+    	Alert alert = driver.switchTo().alert();
+    	//alert.accept();
+    	alert.dismiss();
+    }
+    
+    
+    
     
 
 

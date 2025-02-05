@@ -102,7 +102,7 @@ public class Margin_tradingp
 	        	
 	 			//down by specific no of the pixcel
 	        	 JavascriptExecutor Jv = (JavascriptExecutor)driver;
-	 			Jv.executeScript("window.scrollBy(0,1000)");
+	 			Jv.executeScript("window.scrollBy(0,1500)");
 	      
 	     }
 	     public void verifytheWachlist() throws InterruptedException {

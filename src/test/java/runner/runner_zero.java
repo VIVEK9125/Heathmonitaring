@@ -4,10 +4,10 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
-		features={"src\\main\\resources\\feature\\Pledage_mstock.feature"},
+		features={"src\\main\\resources\\feature\\Margin_trading.feature"},
 		glue= {"steps"},
-		plugin= {"pretty","html:tatrget/cucumber-html-report.html","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
-		publish=true
+		plugin= {"pretty","html:tatrget/cucumber-html-report.html","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
+		//publish=true
 		//tags=" @Mstcokmodule"
 		//monochrome = true,
 		

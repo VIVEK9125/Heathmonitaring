@@ -18,6 +18,8 @@ public class OnScreenStep {
 	@Given("the user is on the logins page.")
 	public void the_user_is_on_the_logins_page() throws InterruptedException {
 		OnScreen.launchurL();
+		Thread.sleep(2000);
+		//OnScreen.haldleNotifiaction();
 		
 	}
 
@@ -25,8 +27,11 @@ public class OnScreenStep {
 	public void the_user_enters_valid_credential() throws InterruptedException {
 		OnScreen.pophandle();
 		OnScreen.enterusername();
+		
+		Thread.sleep(1000);
 		OnScreen.enterpass();
-	    Thread.sleep(1000);
+	    Thread.sleep(2000);
+	    
 	}
 
 	@When("clicks login button.")
@@ -48,6 +53,12 @@ public class OnScreenStep {
 
 	@When("the user click on hamburger")
 	public void the_user_click_on_hamburger() {
+		 try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		OnScreen.clkhamburger();
 	}
 
@@ -59,10 +70,17 @@ public class OnScreenStep {
 	
 	@When("the user clicks on the Reports Menu")
 	public void the_user_clicks_on_the_reports_menu() {
+		 try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	    OnScreen.clkonreports();
 	}
 	@When("the user clicks on the Funds Summary")
-	public void the_user_clicks_on_the_funds_summary() {
+	public void the_user_clicks_on_the_funds_summary() throws InterruptedException {
+		 Thread.sleep(2000);
 	    OnScreen.clkonFunds();
 	}
 
@@ -75,7 +93,7 @@ public class OnScreenStep {
 	@When("the user clicks on {string}")
 	public void the_user_clicks_on(String value) {
 		try {
-			Thread.sleep(1000);
+			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			
 			e.printStackTrace();
@@ -246,7 +264,9 @@ public class OnScreenStep {
 	}
 	
 	@When("the User click on IPO related queries")
-	public void the_user_click_on_ipo_related_queries() {
+	public void the_user_click_on_ipo_related_queries() throws InterruptedException {
+		OnScreen.Scrolling();
+		Thread.sleep(1000);
 	   OnScreen.clkIPOrelated();
 	}
 
@@ -257,7 +277,7 @@ public class OnScreenStep {
 
 	@When("the user clicks on arrow on this pop-up.")
 	public void the_user_clicks_on_arrow_on_this_pop_up() {
-		OnScreen.clkarrow();
+		OnScreen.Arrowbutton();
 	}
 
 	@When("the user click on the {string} button on IPO popup")
@@ -287,23 +307,29 @@ public class OnScreenStep {
 	}
 
 	@When("click on the hamburger")
-	public void click_on_the_hamburger() {
-	   
+	public void click_on_the_hamburger() throws InterruptedException {
+	   OnScreen.clkhamburger();
+	   Thread.sleep(2000);
 	}
 
 	@When("click on Help module")
 	public void click_on_help_module() {
-	   
+		
+	   OnScreen.helppage();
 	}
 
 	@Then("the Help page is open")
-	public void the_help_page_is_open() {
-	    
+	public void the_help_page_is_open() throws InterruptedException {
+	    OnScreen.help2Page();
+	    Thread.sleep(1000);
+	    OnScreen.Scrolling(); 
+	    Thread.sleep(1500);
 	}
 
 	@Then("the All Recent Queries is displayed on this page")
 	public void the_all_recent_queries_is_displayed_on_this_page() {
-	   
+		OnScreen.Scrolling();
+	   OnScreen.getCurrentraisequiery();
 	}
 
 
