@@ -2,58 +2,60 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-05T15:03:55 IST" name="Default suite" finished-at="2025-02-05T15:04:12 IST" duration-ms="17356">
+  <suite started-at="2025-02-06T11:07:07 IST" name="Default suite" finished-at="2025-02-06T11:07:25 IST" duration-ms="17989">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.OnScreen@4e50c791]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-02-05T15:03:55 IST" name="Default test" finished-at="2025-02-05T15:04:12 IST" duration-ms="17356">
+    <test started-at="2025-02-06T11:07:07 IST" name="Default test" finished-at="2025-02-06T11:07:25 IST" duration-ms="17989">
       <class name="runner.OnScreen">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.OnScreen@4e50c791]" started-at="2025-02-05T15:03:55 IST" name="setUpClass" finished-at="2025-02-05T15:03:55 IST" duration-ms="476" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.OnScreen@4e50c791]" started-at="2025-02-06T11:07:07 IST" name="setUpClass" finished-at="2025-02-06T11:07:07 IST" duration-ms="462" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@72eed547]]>
+                <![CDATA[org.testng.TestRunner@20b829d5]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.OnScreen@4e50c791]" started-at="2025-02-05T15:03:55 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-02-05T15:04:10 IST" duration-ms="14652" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.OnScreen@4e50c791]" started-at="2025-02-06T11:07:07 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-02-06T11:07:22 IST" duration-ms="15131" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Verify the IPO page"]]>
+                <![CDATA["Verify user entering invalid credentials"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Verify on Screen modul"]]>
+                <![CDATA["Verify login page"]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoAlertPresentException">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
             <message>
-              <![CDATA[no such alert
+              <![CDATA[element click intercepted: Element <button _ngcontent-lwf-c2="" class="btn btn-primary mt-3 loginCustomLoginBtnNew" type="submit">...</button> is not clickable at point (1239, 470). Other element would receive the click: <div _ngcontent-lwf-c1="" class="ngx-overlay foreground-closing" style="background-color: rgba(40, 40, 40, 0.8); border-radius: 0px;">...</div>
   (Session info: chrome=132.0.6834.110)
 Build info: version: '4.25.0', revision: '8a8aea2337'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [231b541069a17579d701e6a0ad262614, getAlertText {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.110, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\VIVEK~1.NIT\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60916}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60916/devtoo..., se:cdpVersion: 132.0.6834.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 231b541069a17579d701e6a0ad262614]]>
+Command: [807ded41ef30e1a0a0003fa69cc3b53e, clickElement {id=f.3A0B66236EA0F58E18A0300746A723F4.d.85928F2BEB7F9883843F44D5FBF12732.e.17}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.110, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\VIVEK~1.NIT\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55669}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55669/devtoo..., se:cdpVersion: 132.0.6834.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (807ded41ef30e1a0a0003fa69cc3b53e)] -> xpath: //button[text()='LOGIN']]
+Session ID: 807ded41ef30e1a0a0003fa69cc3b53e]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoAlertPresentException: no such alert
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button _ngcontent-lwf-c2="" class="btn btn-primary mt-3 loginCustomLoginBtnNew" type="submit">...</button> is not clickable at point (1239, 470). Other element would receive the click: <div _ngcontent-lwf-c1="" class="ngx-overlay foreground-closing" style="background-color: rgba(40, 40, 40, 0.8); border-radius: 0px;">...</div>
   (Session info: chrome=132.0.6834.110)
 Build info: version: '4.25.0', revision: '8a8aea2337'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [231b541069a17579d701e6a0ad262614, getAlertText {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.110, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\VIVEK~1.NIT\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60916}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60916/devtoo..., se:cdpVersion: 132.0.6834.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 231b541069a17579d701e6a0ad262614
+Command: [807ded41ef30e1a0a0003fa69cc3b53e, clickElement {id=f.3A0B66236EA0F58E18A0300746A723F4.d.85928F2BEB7F9883843F44D5FBF12732.e.17}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.110, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\VIVEK~1.NIT\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55669}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55669/devtoo..., se:cdpVersion: 132.0.6834.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (807ded41ef30e1a0a0003fa69cc3b53e)] -> xpath: //button[text()='LOGIN']]
+Session ID: 807ded41ef30e1a0a0003fa69cc3b53e
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
@@ -64,19 +66,22 @@ at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.ja
 at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
-at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:1190)
-at pom.OnScreenPage.haldleNotifiaction(OnScreenPage.java:421)
-at steps.OnScreenStep.the_user_enters_valid_credential(OnScreenStep.java:30)
-at ✽.the user enters valid credential.(file:///C:/Users/vivek.nityo/git/New%20folder/Heathmonitaring/src/main/resources/Refer%20and%20Earn/OnScreenScenario.feature:5)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy27.click(Unknown Source)
+at pom.login_Fail_pom.login_button(login_Fail_pom.java:92)
+at steps.Login_fail.the_user_clicks_on_the_login_button(Login_fail.java:36)
+at ✽.the user clicks on the login button(file:///C:/Users/vivek.nityo/git/New%20folder/Heathmonitaring/src/main/resources/Refer%20and%20Earn/Login_Fail.feature:5)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoAlertPresentException -->
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.OnScreen@4e50c791]" started-at="2025-02-05T15:04:10 IST" name="tearDownClass" finished-at="2025-02-05T15:04:12 IST" duration-ms="2212" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.OnScreen@4e50c791]" started-at="2025-02-06T11:07:22 IST" name="tearDownClass" finished-at="2025-02-06T11:07:25 IST" duration-ms="2369" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

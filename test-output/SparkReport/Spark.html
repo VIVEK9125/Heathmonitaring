@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Feb 5, 2025 03:03:55 PM</span></a>
+<a href="#"><span class="badge badge-primary">Feb 6, 2025 11:07:07 AM</span></a>
 </li>
 </ul>
 </div>
@@ -50,11 +50,6 @@
 <li class="nav-item dropdown" onclick="toggleView('exception-view')">
 <a id="nav-exception" class="dropdown-toggle" href="#">
 <span class="ico"><i class="fa fa-bug"></i></span>
-</a>
-</li>
-<li class="nav-item dropdown" onclick="toggleView('category-view')">
-<a id="nav-category" class="dropdown-toggle" href="#">
-<span class="ico"><i class="fa fa-tag"></i></span>
 </a>
 </li>
 <li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
@@ -81,12 +76,6 @@
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
 </li>
-<li class="dropdown">
-<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
-<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@IPO_Page</a>
-</ul>
-</li>
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
@@ -95,9 +84,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Verify on Screen modul</p>
+            <p class="name">Verify login page</p>
             <p class="text-sm">
-              <span>3:03:56 PM</span> / <span>00:00:14:481</span>
+              <span>11:07:07 AM</span> / <span>00:00:14:972</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -105,10 +94,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">Verify on Screen modul</h5>
-<span class='badge badge-success'>02.05.2025 3:03:56 PM</span>
-<span class='badge badge-danger'>02.05.2025 3:04:10 PM</span>
-<span class='badge badge-default'>00:00:14:481</span>
+<h5 class="test-status text-fail">Verify login page</h5>
+<span class='badge badge-success'>02.06.2025 11:07:07 AM</span>
+<span class='badge badge-danger'>02.06.2025 11:07:22 AM</span>
+<span class='badge badge-default'>00:00:14:972</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -120,27 +109,33 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log fail-bg mr-2">Fail</span>Verify the IPO page</div>
+        <div class="node" id="2"><span class="badge log fail-bg mr-2">Fail</span>Verify user entering invalid credentials</div>
       </div>
     </div>
         <div class="">
           <div class="card-body">
-              <div class="step pass-bg" title="steps.OnScreenStep.the_user_is_on_the_logins_page()">
-                <span>Given the user is on the logins page.</span>
+              <div class="step pass-bg" title="steps.Login_fail.the_user_is_on_the_login_page()">
+                <span>Given The user is on the login page</span>
       <div>
       </div>
               </div>
-              <div class="step fail-bg" title="steps.OnScreenStep.the_user_enters_valid_credential()">
-                <span>When the user enters valid credential.</span>
+              <div class="step pass-bg" title="steps.Login_fail.the_user_enters_invalid_credentials()">
+                <span>When the user enters invalid credentials</span>
       <div>
-        <textarea disabled class="code-block">org.openqa.selenium.NoAlertPresentException: no such alert
+      </div>
+              </div>
+              <div class="step fail-bg" title="steps.Login_fail.the_user_clicks_on_the_login_button()">
+                <span>And the user clicks on the login button</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button _ngcontent-lwf-c2="" class="btn btn-primary mt-3 loginCustomLoginBtnNew" type="submit">...</button> is not clickable at point (1239, 470). Other element would receive the click: <div _ngcontent-lwf-c1="" class="ngx-overlay foreground-closing" style="background-color: rgba(40, 40, 40, 0.8); border-radius: 0px;">...</div>
   (Session info: chrome=132.0.6834.110)
 Build info: version: '4.25.0', revision: '8a8aea2337'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [231b541069a17579d701e6a0ad262614, getAlertText {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.110, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\VIVEK~1.NIT\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60916}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60916/devtoo..., se:cdpVersion: 132.0.6834.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 231b541069a17579d701e6a0ad262614
+Command: [807ded41ef30e1a0a0003fa69cc3b53e, clickElement {id=f.3A0B66236EA0F58E18A0300746A723F4.d.85928F2BEB7F9883843F44D5FBF12732.e.17}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.110, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\VIVEK~1.NIT\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55669}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55669/devtoo..., se:cdpVersion: 132.0.6834.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (807ded41ef30e1a0a0003fa69cc3b53e)] -> xpath: //button[text()='LOGIN']]
+Session ID: 807ded41ef30e1a0a0003fa69cc3b53e
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
@@ -151,108 +146,21 @@ Session ID: 231b541069a17579d701e6a0ad262614
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:1190)
-	at pom.OnScreenPage.haldleNotifiaction(OnScreenPage.java:421)
-	at steps.OnScreenStep.the_user_enters_valid_credential(OnScreenStep.java:30)
-	at ✽.the user enters valid credential.(file:///C:/Users/vivek.nityo/git/New%20folder/Heathmonitaring/src/main/resources/Refer%20and%20Earn/OnScreenScenario.feature:5)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy27.click(Unknown Source)
+	at pom.login_Fail_pom.login_button(login_Fail_pom.java:92)
+	at steps.Login_fail.the_user_clicks_on_the_login_button(Login_fail.java:36)
+	at ✽.the user clicks on the login button(file:///C:/Users/vivek.nityo/git/New%20folder/Heathmonitaring/src/main/resources/Refer%20and%20Earn/Login_Fail.feature:5)
 </textarea>
       
       </div>
               </div>
-              <div class="step skip-bg" title="steps.OnScreenStep.clicks_login_button()">
-                <span>And clicks login button.</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="steps.OnScreenStep.entering_valid_otp()">
-                <span>And Entering  valid otp.</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="steps.OnScreenStep.user_should_be_redirected_to_the_dashboard()">
-                <span>Then user should be redirected to the dashboard.</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="steps.OnScreenStep.the_user_click_on_hamburger()">
-                <span>When the user click on hamburger</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="steps.OnScreenStep.the_side_bar_should_open()">
-                <span>Then the side bar should open.</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="steps.OnScreenStep.the_click_on_ipo()">
-                <span>When the click on IPO</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="steps.OnScreenStep.the_ipo_page_should_be_open()">
-                <span>Then The IPO page Should be open</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="steps.OnScreenStep.the_user_click_on_ipo_related_queries()">
-                <span>When the User click on IPO related queries</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="steps.OnScreenStep.the_ipo_pop_is_opened()">
-                <span>Then The IPO pop is opened</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="steps.OnScreenStep.the_user_clicks_on_arrow_on_this_pop_up()">
-                <span>When the user clicks on arrow on this pop-up.</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="steps.OnScreenStep.the_user_click_on_the_button_on_ipo_popup(java.lang.String)">
-                <span>And the user click on the "clicking here" button on IPO popup</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="steps.OnScreenStep.the_user_enters_their_query_and_attaches_the_attachments_on_pop_up()">
-                <span>And the user enters their query and attaches the attachments on pop up.</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="steps.OnScreenStep.clicks_on_the_raise_query_button_on_ipo_popup()">
-                <span>And clicks on the Raise Query button on IPO popup</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="steps.OnScreenStep.query_and_attachments_is_attached_successfully()">
-                <span>Then query and attachments is attached successfully.</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="steps.OnScreenStep.back_to_main_page()">
-                <span>And Back to main page</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="steps.OnScreenStep.click_on_the_hamburger()">
-                <span>When click on the hamburger</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="steps.OnScreenStep.click_on_help_module()">
-                <span>And click on Help module</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="steps.OnScreenStep.the_help_page_is_open()">
-                <span>Then the Help page is open</span>
-      <div>Step skipped
-      </div>
-              </div>
-              <div class="step skip-bg" title="steps.OnScreenStep.the_all_recent_queries_is_displayed_on_this_page()">
-                <span>And the All Recent Queries is displayed on this page</span>
+              <div class="step skip-bg" title="steps.Login_fail.the_error_message_should_be_displayed(java.lang.String)">
+                <span>Then the "Invalid username or password. attempts remaining" error message should be displayed</span>
       <div>Step skipped
       </div>
               </div>
@@ -284,12 +192,12 @@ Session ID: 231b541069a17579d701e6a0ad262614
 <span class="meta">
 <span class='badge log badge-danger'>1</span>
 </span>
-<p class="name">org.openqa.selenium.NoAlertPresentException</p>
+<p class="name">org.openqa.selenium.ElementClickInterceptedException</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>org.openqa.selenium.NoAlertPresentException</h4>
+<h4>org.openqa.selenium.ElementClickInterceptedException</h4>
 <span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -303,63 +211,11 @@ Session ID: 231b541069a17579d701e6a0ad262614
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>15:04:05 PM</td>
+<td>11:07:21 AM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='5'>When the user enters valid credential.</a>
+<a href="#" class="linked" test-id='1' id='6'>And the user clicks on the login button</a>
 <div class="">
-<span class="badge badge-default">Verify on Screen modul.Verify the IPO page.When the user enters valid credential.</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="test-content scrollable">
-<div class="test-content-detail">
-<div class="detail-body"></div>
-</div>
-</div>
-</div><div class="test-wrapper row view category-view attributes-view">
-<div class="test-list">
-<div class="test-list-tools">
-<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
-<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
-</div>
-<div class="test-list-wrapper scrollable">
-<ul class="test-list-item">
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log badge-danger'>1</span>
-</span>
-<p class="name">@IPO_Page</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>@IPO_Page</h4>
-<span status="fail" class='badge log badge-danger'>1 failed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="fail">
-<td><span class="badge log fail-bg">Fail</span></td>
-<td>15:03:56 PM</td>
-<td>
-<a href="#" class="linked" test-id='1' id='2'>Verify the IPO page</a>
-<div class="">
-<span class="badge badge-default">Verify on Screen modul.Verify the IPO page</span>
+<span class="badge badge-default">Verify login page.Verify user entering invalid credentials.And the user clicks on the login button</span>
 </div>
 </td>
 </tr>
@@ -380,13 +236,13 @@ Session ID: 231b541069a17579d701e6a0ad262614
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Feb 5, 2025 03:03:55 PM</h3>
+<h3>Feb 6, 2025 11:07:07 AM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Feb 5, 2025 03:04:10 PM</h3>
+<h3>Feb 6, 2025 11:07:22 AM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -457,10 +313,10 @@ Session ID: 231b541069a17579d701e6a0ad262614
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='4%'><b>1</b> steps passed</small></div>
+<div><small data-tooltip='50%'><b>2</b> steps passed</small></div>
 <div>
-<small data-tooltip='4%'><b>1</b> steps failed,
-<b>19</b> skipped, <b data-tooltip='%'>0</b> others
+<small data-tooltip='25%'><b>1</b> steps failed,
+<b>1</b> skipped, <b data-tooltip='%'>0</b> others
 </small>
 </div>
 </div>
@@ -476,27 +332,10 @@ Session ID: 231b541069a17579d701e6a0ad262614
 </div></div>
 <script>
 var timeline = {
-"Verify on Screen modul":14.481
+"Verify login page":14.972
 };
 </script>
 <div class="row">
-<div class="col-lg-6 col-md-12 category-container">
-<div class="card">
-<div class="card-header"><p>Tags</p></div>
-<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
-<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
-<tr>
-<td>@IPO_Page</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0%</td>
-</tr>
-</tbody>
-</table></div>
-</div>
-</div>
 </div>
 </div>
 <script>
@@ -513,10 +352,10 @@ warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 1,
+passGrandChild: 2,
 failGrandChild: 1,
 warningGrandChild: 0,
-skipGrandChild: 19,
+skipGrandChild: 1,
 infoGrandChild: 0,
 eventsCount: 5,
 };

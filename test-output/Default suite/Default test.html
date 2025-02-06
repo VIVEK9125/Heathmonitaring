@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Feb 05 15:03:55 IST 2025</td>
+<td>Started on:</td><td>Thu Feb 06 11:07:07 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>17 seconds (17356 ms)</td>
+<tr><td>Total time:</td><td>17 seconds (17989 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,15 +75,16 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runner.OnScreen.runScenario()'><b>runScenario</b><br>Test class: runner.OnScreen<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify the IPO page", "Verify on Screen modul"</td>
-<td><div><pre>org.openqa.selenium.NoAlertPresentException: no such alert
+<td title='runner.OnScreen.runScenario()'><b>runScenario</b><br>Test class: runner.OnScreen<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user entering invalid credentials", "Verify login page"</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button _ngcontent-lwf-c2=&quot;&quot; class=&quot;btn btn-primary mt-3 loginCustomLoginBtnNew&quot; type=&quot;submit&quot;&gt;...&lt;/button&gt; is not clickable at point (1239, 470). Other element would receive the click: &lt;div _ngcontent-lwf-c1=&quot;&quot; class=&quot;ngx-overlay foreground-closing&quot; style=&quot;background-color: rgba(40, 40, 40, 0.8); border-radius: 0px;&quot;&gt;...&lt;/div&gt;
   (Session info: chrome=132.0.6834.110)
 Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [231b541069a17579d701e6a0ad262614, getAlertText {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.110, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\VIVEK~1.NIT\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60916}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60916/devtoo..., se:cdpVersion: 132.0.6834.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 231b541069a17579d701e6a0ad262614
+Command: [807ded41ef30e1a0a0003fa69cc3b53e, clickElement {id=f.3A0B66236EA0F58E18A0300746A723F4.d.85928F2BEB7F9883843F44D5FBF12732.e.17}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.110, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\VIVEK~1.NIT\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55669}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55669/devtoo..., se:cdpVersion: 132.0.6834.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (807ded41ef30e1a0a0003fa69cc3b53e)] -&gt; xpath: //button[text()=&apos;LOGIN&apos;]]
+Session ID: 807ded41ef30e1a0a0003fa69cc3b53e
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
@@ -94,21 +95,25 @@ Session ID: 231b541069a17579d701e6a0ad262614
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:1190)
-	at pom.OnScreenPage.haldleNotifiaction(OnScreenPage.java:421)
-	at steps.OnScreenStep.the_user_enters_valid_credential(OnScreenStep.java:30)
-	at ✽.the user enters valid credential.(file:///C:/Users/vivek.nityo/git/New%20folder/Heathmonitaring/src/main/resources/Refer%20and%20Earn/OnScreenScenario.feature:5)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1134011961", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1134011961'><pre>org.openqa.selenium.NoAlertPresentException: no such alert
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy27.click(Unknown Source)
+	at pom.login_Fail_pom.login_button(login_Fail_pom.java:92)
+	at steps.Login_fail.the_user_clicks_on_the_login_button(Login_fail.java:36)
+	at ✽.the user clicks on the login button(file:///C:/Users/vivek.nityo/git/New%20folder/Heathmonitaring/src/main/resources/Refer%20and%20Earn/Login_Fail.feature:5)
+</pre></div><a href='#' onClick='toggleBox("stack-trace812609309", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace812609309'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button _ngcontent-lwf-c2=&quot;&quot; class=&quot;btn btn-primary mt-3 loginCustomLoginBtnNew&quot; type=&quot;submit&quot;&gt;...&lt;/button&gt; is not clickable at point (1239, 470). Other element would receive the click: &lt;div _ngcontent-lwf-c1=&quot;&quot; class=&quot;ngx-overlay foreground-closing&quot; style=&quot;background-color: rgba(40, 40, 40, 0.8); border-radius: 0px;&quot;&gt;...&lt;/div&gt;
   (Session info: chrome=132.0.6834.110)
 Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [231b541069a17579d701e6a0ad262614, getAlertText {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.110, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\VIVEK~1.NIT\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60916}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60916/devtoo..., se:cdpVersion: 132.0.6834.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 231b541069a17579d701e6a0ad262614
+Command: [807ded41ef30e1a0a0003fa69cc3b53e, clickElement {id=f.3A0B66236EA0F58E18A0300746A723F4.d.85928F2BEB7F9883843F44D5FBF12732.e.17}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.110, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\VIVEK~1.NIT\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55669}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55669/devtoo..., se:cdpVersion: 132.0.6834.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (807ded41ef30e1a0a0003fa69cc3b53e)] -&gt; xpath: //button[text()=&apos;LOGIN&apos;]]
+Session ID: 807ded41ef30e1a0a0003fa69cc3b53e
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
@@ -119,14 +124,17 @@ Session ID: 231b541069a17579d701e6a0ad262614
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.alert(RemoteWebDriver.java:1190)
-	at pom.OnScreenPage.haldleNotifiaction(OnScreenPage.java:421)
-	at steps.OnScreenStep.the_user_enters_valid_credential(OnScreenStep.java:30)
-	at ✽.the user enters valid credential.(file:///C:/Users/vivek.nityo/git/New%20folder/Heathmonitaring/src/main/resources/Refer%20and%20Earn/OnScreenScenario.feature:5)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy27.click(Unknown Source)
+	at pom.login_Fail_pom.login_button(login_Fail_pom.java:92)
+	at steps.Login_fail.the_user_clicks_on_the_login_button(Login_fail.java:36)
+	at ✽.the user clicks on the login button(file:///C:/Users/vivek.nityo/git/New%20folder/Heathmonitaring/src/main/resources/Refer%20and%20Earn/Login_Fail.feature:5)
 </pre></div></td>
-<td>14</td>
+<td>15</td>
 <td>runner.OnScreen@4e50c791</td></tr>
 </table><p>
 </body>

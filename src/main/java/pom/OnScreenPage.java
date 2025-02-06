@@ -413,7 +413,7 @@ public class OnScreenPage
 		Thread.sleep(2000);
 	}
     public void Actiondown() {
-    	// Scroll down the page using the Page Down key
+    	//  down the page using the Page Down key
         Actions actions = new Actions(driver);
         actions.sendKeys(Keys.PAGE_DOWN).perform();
     }
