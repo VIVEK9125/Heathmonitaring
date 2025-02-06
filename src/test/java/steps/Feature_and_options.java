@@ -98,19 +98,22 @@ public class Feature_and_options
 	}
 
 	@Then("the answer should be displayed.")
-	public void the_answer_should_be_displayed() {
+	public void the_answer_should_be_displayed() throws InterruptedException {
       Feature.FAQverify();
       Feature.clickonarrow();
+      Thread.sleep(2000);
       Feature.clickonnextarrow();
 	}
 
 	@When("the user clicks on any CTA.")
-	public void the_user_clicks_on_any_cta() {
+	public void the_user_clicks_on_any_cta() throws InterruptedException {
+		Thread.sleep(2000);
 	    Feature.getalllinkcount();
 	}
 
 	@Then("the user should navigate to the respective page.")
-	public void the_user_should_navigate_to_the_respective_page() {
+	public void the_user_should_navigate_to_the_respective_page() throws InterruptedException {
+		Thread.sleep(2000);
 	    Feature.clickonanylinks();
 	}
 	

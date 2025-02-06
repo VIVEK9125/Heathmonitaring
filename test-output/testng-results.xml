@@ -1,27 +1,247 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="18" passed="17" failed="1" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[https://www.mstock.com/sem-landing/futures-and-options]]>
+    </line>
+    <line>
+      <![CDATA[https://www.mstock.com/sem-landing/margin-trading]]>
+    </line>
+    <line>
+      <![CDATA[https://www.mstock.com/sem-landing/zero-brokerage-on-delivery]]>
+    </line>
   </reporter-output>
-  <suite started-at="2025-02-06T11:07:07 IST" name="Default suite" finished-at="2025-02-06T11:07:25 IST" duration-ms="17989">
+  <suite started-at="2025-02-06T15:51:43 IST" name="Default suite" finished-at="2025-02-06T16:00:05 IST" duration-ms="502299">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.OnScreen@4e50c791]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-02-06T11:07:07 IST" name="Default test" finished-at="2025-02-06T11:07:25 IST" duration-ms="17989">
+    <test started-at="2025-02-06T15:51:43 IST" name="Default test" finished-at="2025-02-06T16:00:05 IST" duration-ms="502299">
       <class name="runner.OnScreen">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.OnScreen@4e50c791]" started-at="2025-02-06T11:07:07 IST" name="setUpClass" finished-at="2025-02-06T11:07:07 IST" duration-ms="462" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.OnScreen@4e50c791]" started-at="2025-02-06T15:51:43 IST" name="setUpClass" finished-at="2025-02-06T15:51:44 IST" duration-ms="510" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@20b829d5]]>
+                <![CDATA[org.testng.TestRunner@893081e]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.OnScreen@4e50c791]" started-at="2025-02-06T11:07:07 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-02-06T11:07:22 IST" duration-ms="15131" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.OnScreen@4e50c791]" started-at="2025-02-06T15:51:44 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-02-06T15:52:34 IST" duration-ms="50636" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify the Funds Summary page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verify on Screen modul"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.OnScreen@4e50c791]" started-at="2025-02-06T15:52:34 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-02-06T15:53:24 IST" duration-ms="49423" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify the Ledger page."]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verify on Screen modul"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.OnScreen@4e50c791]" started-at="2025-02-06T15:53:24 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-02-06T15:54:13 IST" duration-ms="49632" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify the Trade_History page."]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verify on Screen modul"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.OnScreen@4e50c791]" started-at="2025-02-06T15:54:13 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-02-06T15:55:17 IST" duration-ms="64029" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify the IPO page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verify on Screen modul"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.OnScreen@4e50c791]" started-at="2025-02-06T15:55:17 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-02-06T15:56:29 IST" duration-ms="71419" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successful Login with Valid Credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verify the Refer and learn Module"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.OnScreen@4e50c791]" started-at="2025-02-06T15:56:29 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-02-06T15:56:47 IST" duration-ms="18489" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify The Share link page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verify the Refer and learn Module"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.OnScreen@4e50c791]" started-at="2025-02-06T15:56:47 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-02-06T15:56:52 IST" duration-ms="4927" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify The Open link page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verify the Refer and learn Module"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.OnScreen@4e50c791]" started-at="2025-02-06T15:56:52 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-02-06T15:56:57 IST" duration-ms="4587" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify the brokerage-calculator page is loads successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verify Trading Account multiple page"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.OnScreen@4e50c791]" started-at="2025-02-06T15:56:57 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-02-06T15:57:05 IST" duration-ms="8304" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify the equity-trading page loads successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verify Trading Account multiple page"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.OnScreen@4e50c791]" started-at="2025-02-06T15:57:05 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-02-06T15:57:14 IST" duration-ms="9321" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify the IPO page loads successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verify Trading Account multiple page"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.OnScreen@4e50c791]" started-at="2025-02-06T15:57:14 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-02-06T15:57:32 IST" duration-ms="18094" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify the Mstock videos page loads successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verify Trading Account multiple page"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.OnScreen@4e50c791]" started-at="2025-02-06T15:57:32 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-02-06T15:57:37 IST" duration-ms="4780" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify the partner page loads successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verify Trading Account multiple page"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.OnScreen@4e50c791]" started-at="2025-02-06T15:57:37 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-02-06T15:58:17 IST" duration-ms="39748" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify all aspects of the feature and options landing page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["verify the feature and options Landing page"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[https://www.mstock.com/sem-landing/futures-and-options]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.OnScreen@4e50c791]" started-at="2025-02-06T15:58:17 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-02-06T15:58:34 IST" duration-ms="16802" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -36,26 +256,26 @@
           </params>
           <exception class="org.openqa.selenium.ElementClickInterceptedException">
             <message>
-              <![CDATA[element click intercepted: Element <button _ngcontent-lwf-c2="" class="btn btn-primary mt-3 loginCustomLoginBtnNew" type="submit">...</button> is not clickable at point (1239, 470). Other element would receive the click: <div _ngcontent-lwf-c1="" class="ngx-overlay foreground-closing" style="background-color: rgba(40, 40, 40, 0.8); border-radius: 0px;">...</div>
+              <![CDATA[element click intercepted: Element <button _ngcontent-lot-c2="" class="btn btn-primary mt-3 loginCustomLoginBtnNew" type="submit">...</button> is not clickable at point (1239, 470). Other element would receive the click: <div _ngcontent-lot-c1="" class="ngx-overlay foreground-closing" style="background-color: rgba(40, 40, 40, 0.8); border-radius: 0px;">...</div>
   (Session info: chrome=132.0.6834.110)
 Build info: version: '4.25.0', revision: '8a8aea2337'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [807ded41ef30e1a0a0003fa69cc3b53e, clickElement {id=f.3A0B66236EA0F58E18A0300746A723F4.d.85928F2BEB7F9883843F44D5FBF12732.e.17}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.110, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\VIVEK~1.NIT\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55669}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55669/devtoo..., se:cdpVersion: 132.0.6834.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (807ded41ef30e1a0a0003fa69cc3b53e)] -> xpath: //button[text()='LOGIN']]
-Session ID: 807ded41ef30e1a0a0003fa69cc3b53e]]>
+Command: [66074bd1e4113c0daeb62b6e44ae7911, clickElement {id=f.491B7258FDFEA797D99201EF692EC173.d.A7A8B6ACC738F41AB4B533F9147E38A5.e.16}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.110, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\VIVEK~1.NIT\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55608}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55608/devtoo..., se:cdpVersion: 132.0.6834.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (66074bd1e4113c0daeb62b6e44ae7911)] -> xpath: //button[text()='LOGIN']]
+Session ID: 66074bd1e4113c0daeb62b6e44ae7911]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button _ngcontent-lwf-c2="" class="btn btn-primary mt-3 loginCustomLoginBtnNew" type="submit">...</button> is not clickable at point (1239, 470). Other element would receive the click: <div _ngcontent-lwf-c1="" class="ngx-overlay foreground-closing" style="background-color: rgba(40, 40, 40, 0.8); border-radius: 0px;">...</div>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button _ngcontent-lot-c2="" class="btn btn-primary mt-3 loginCustomLoginBtnNew" type="submit">...</button> is not clickable at point (1239, 470). Other element would receive the click: <div _ngcontent-lot-c1="" class="ngx-overlay foreground-closing" style="background-color: rgba(40, 40, 40, 0.8); border-radius: 0px;">...</div>
   (Session info: chrome=132.0.6834.110)
 Build info: version: '4.25.0', revision: '8a8aea2337'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [807ded41ef30e1a0a0003fa69cc3b53e, clickElement {id=f.3A0B66236EA0F58E18A0300746A723F4.d.85928F2BEB7F9883843F44D5FBF12732.e.17}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.110, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\VIVEK~1.NIT\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55669}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55669/devtoo..., se:cdpVersion: 132.0.6834.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (807ded41ef30e1a0a0003fa69cc3b53e)] -> xpath: //button[text()='LOGIN']]
-Session ID: 807ded41ef30e1a0a0003fa69cc3b53e
+Command: [66074bd1e4113c0daeb62b6e44ae7911, clickElement {id=f.491B7258FDFEA797D99201EF692EC173.d.A7A8B6ACC738F41AB4B533F9147E38A5.e.16}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.110, chrome: {chromedriverVersion: 132.0.6834.159 (2d77d3fc445..., userDataDir: C:\Users\VIVEK~1.NIT\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55608}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55608/devtoo..., se:cdpVersion: 132.0.6834.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (66074bd1e4113c0daeb62b6e44ae7911)] -> xpath: //button[text()='LOGIN']]
+Session ID: 66074bd1e4113c0daeb62b6e44ae7911
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
@@ -72,16 +292,86 @@ at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethod
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
 at jdk.proxy2/jdk.proxy2.$Proxy27.click(Unknown Source)
-at pom.login_Fail_pom.login_button(login_Fail_pom.java:92)
-at steps.Login_fail.the_user_clicks_on_the_login_button(Login_fail.java:36)
-at ✽.the user clicks on the login button(file:///C:/Users/vivek.nityo/git/New%20folder/Heathmonitaring/src/main/resources/Refer%20and%20Earn/Login_Fail.feature:5)
+at pom.login_Fail_pom.login_button(login_Fail_pom.java:99)
+at steps.Login_fail.the_user_clicks_on_the_login_button(Login_fail.java:38)
+at ✽.the user clicks on the login button(file:///C:/Users/vivek.nityo/git/New%20folder/Heathmonitaring/src/main/resources/feature/Login_Fail.feature:5)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.OnScreen@4e50c791]" started-at="2025-02-06T11:07:22 IST" name="tearDownClass" finished-at="2025-02-06T11:07:25 IST" duration-ms="2369" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.OnScreen@4e50c791]" started-at="2025-02-06T15:58:34 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-02-06T15:59:07 IST" duration-ms="33562" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify all aspects of the Margin trading landing page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["verify the Margin trading"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[https://www.mstock.com/sem-landing/margin-trading]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.OnScreen@4e50c791]" started-at="2025-02-06T15:59:07 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-02-06T15:59:20 IST" duration-ms="12327" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify the pledge-shares page loads successfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verify the pledge mStock modules"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.OnScreen@4e50c791]" started-at="2025-02-06T15:59:20 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-02-06T15:59:31 IST" duration-ms="11285" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify the brokerage-savings page loads successfully."]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verify the pledge mStock modules"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.OnScreen@4e50c791]" started-at="2025-02-06T15:59:31 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-02-06T16:00:02 IST" duration-ms="31189" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify all aspects of the zero brokage on delivery landing page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["verify the zero brokage on delivery"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[https://www.mstock.com/sem-landing/zero-brokerage-on-delivery]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.OnScreen@4e50c791]" started-at="2025-02-06T16:00:02 IST" name="tearDownClass" finished-at="2025-02-06T16:00:05 IST" duration-ms="3180" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

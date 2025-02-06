@@ -8,8 +8,7 @@ import io.cucumber.java.en.When;
 import page_factory.DriverFactory;
 import pom.Refer_earn;
 
-public class Refer_And_Earn {
-	
+public class Refer_Earn {
 	Refer_earn Refer_earn = new Refer_earn(DriverFactory.getDriver());
 	WebDriver driver = DriverFactory.getDriver();
 	String URL = "https://trade.mirae-asset.co.in/#/login";
@@ -25,6 +24,7 @@ public class Refer_And_Earn {
 	@When("the user enters valid credentials")
 	public void the_user_enters_valid_credentials() throws InterruptedException {
 		Refer_earn.pophandle();
+		Thread.sleep(1000);
 		Refer_earn.enterusername();
 		Refer_earn.enterpass();
 	    Thread.sleep(1000);
@@ -50,7 +50,8 @@ public class Refer_And_Earn {
 	}
 
 	@When("the user click on the hamburger.")
-	public void the_user_click_on_the_hamburger() {
+	public void the_user_click_on_the_hamburger() throws InterruptedException {
+		Thread.sleep(2000);
 		Refer_earn.clkhamburger();
 	}
 
@@ -61,7 +62,9 @@ public class Refer_And_Earn {
 
 	@When("the user click on the {string}")
 	public void the_user_click_on_the(String string) throws InterruptedException {
+		Thread.sleep(2000);
 		Refer_earn.clkRefer_learn();
+		Thread.sleep(2000);
 		Refer_earn.helpMainPage();
 	}
 
@@ -84,6 +87,7 @@ public class Refer_And_Earn {
 	@When("User Enter the refrance number")
 	public void user_enter_the_refrance_number() throws InterruptedException {
 		Refer_earn.referralno();
+		Thread.sleep(2000);
 	}
 
 	@When("the Click on the Submit button")
@@ -93,11 +97,11 @@ public class Refer_And_Earn {
 	 
 	}
 	@Then("Verify this {string} Message")
-	public void verify_this_message(String text) {
+	public void verify_this_message(String value) {
 		Refer_earn.verifymessage();
 		 
 		 try {
-				Thread.sleep(1000);
+				Thread.sleep(5000);
 			} catch (InterruptedException e) {
 				
 				e.printStackTrace();
@@ -175,5 +179,24 @@ public class Refer_And_Earn {
 	public void the_user_should_be_redirect_on_the_enter_otp_page() {
 	 Refer_earn.verifyotppage();
 	}
+	
+	//***************************************************** Open-link************************************
+	
+	@Given("User on the Open link")
+	public void user_on_the_open_link() {
+	  Refer_earn.openlink();
+	}
+
+	@When("the user Entering the number and click on the Start Referring button")
+	public void the_user_entering_the_number_and_click_on_the_start_referring_button() {
+        Refer_earn.clickstartreferral();
+	}
+
+	@Then("The user Should redirect on referral page")
+	public void the_user_should_redirect_on_referral_page() {
+	    Refer_earn.getcurrenturl();
+	}
+
+	
 
 }

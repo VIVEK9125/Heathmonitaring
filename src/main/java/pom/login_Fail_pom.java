@@ -3,11 +3,13 @@ package pom;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -38,7 +40,7 @@ public class login_Fail_pom
     	
     }
     
-    public void cugurL() {
+    public void cugurL() throws InterruptedException {
     	 try {
     	
              // URL to test
@@ -66,6 +68,11 @@ public class login_Fail_pom
          } catch (InterruptedException e) {
              System.err.println("ERROR WHILE WAITING FOR THE PAGE TO LOAD: " + e.getMessage());
          }
+    	 Thread.sleep(2000);
+    }
+    public void handleAlert() throws InterruptedException {
+    	ChromeOptions options = new ChromeOptions();
+    	options.addArguments("--disable-notifications");
     }
 
     public void pophandle() {

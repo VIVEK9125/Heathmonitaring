@@ -219,17 +219,17 @@ public class Organic_sem_Page4
 	 
 	 public void clickon_topic() throws InterruptedException {
 		 demataccount.click();
-		 Thread.sleep(1000);
+		 Thread.sleep(2000);
 		 tradingaccount.click();
-		 Thread.sleep(1000);
+		 Thread.sleep(2000);
 		 Mutual_fund.click();
-		 Thread.sleep(1000);
+		 Thread.sleep(2000);
 		 IPO1.click();
-		 Thread.sleep(1000);
+		 Thread.sleep(2000);
 		 MTF.click();
-		 Thread.sleep(1000);
+		 Thread.sleep(2000);
 		 customer_review.click();
-		 Thread.sleep(1000);
+		 Thread.sleep(2000);
 		 intraday.click();
 		 
 	 }
@@ -239,7 +239,7 @@ public class Organic_sem_Page4
 	 }
 	 public void clkvideo() throws InterruptedException {
 		 clkvideo.click();
-		 Thread.sleep(1000);
+		 Thread.sleep(2000);
 		 clkvideo.clear();
 	 }
 	 
@@ -257,12 +257,12 @@ public class Organic_sem_Page4
 	 }
 	 public void stockpgno() throws InterruptedException {
 		 Enternumber.sendKeys("9284267989");
-		 Thread.sleep(1000);
+		 Thread.sleep(2000);
 		 clkopenaccouunt.submit();
 		 
 	 }
 	 public void clkbackbtnstock() throws InterruptedException {
-		 Thread.sleep(1000);
+		 Thread.sleep(2000);
 		 driver.navigate().back();
 	 }
 	 public void verifypagestock() {

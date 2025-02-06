@@ -95,7 +95,7 @@ public class Margin_tradingp
 //	     	
 //	    	 wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 //	    	 wait.until(ExpectedConditions.invisibilityOf(Enterno));
-	    	 Thread.sleep(2000);
+	    	 Thread.sleep(3000);
 	     	driver.navigate().back();
 	     }
 	         public void Scrolling() {
@@ -106,6 +106,7 @@ public class Margin_tradingp
 	      
 	     }
 	     public void verifytheWachlist() throws InterruptedException {
+	    	 Thread.sleep(2000);
 	    	 clkWatchlist.click();
 	    	 String watchlistytext =clkWatchlist.getText();
 	    	 System.out.println("Title of the tab is :"+watchlistytext);
@@ -131,21 +132,34 @@ public class Margin_tradingp
 	    	 secondNo.sendKeys("9284267912");
 	    	 Thread.sleep(3000);
 	    	 opac2.click();
-	    	 Thread.sleep(1000);
+	    	 Thread.sleep(2000);
 	     }
 	     public void FAQverify(){
 	    	     FAQverifyd.click();
 	            System.out.println("Answer: " + FAQverifyd.getText());
+	            try {
+					Thread.sleep(2000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 	 		
 	    	 
 	     }
 	     public void clickonarrow() {
 	    	 clickonarrow.click();
 	    	 System.out.println("Answer: " + clickonarrow.getText());
+	    	 try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 	     }
-	     public void clickonnextarrow() {
+	     public void clickonnextarrow() throws InterruptedException {
 	    	 clickonnext.click();
 	    	 System.out.println("Answer of How to place F&O orders?: " + clickonarrow.getText());
+	    	 Thread.sleep(2000);
 	     }
 	     public void getalllinkcount() {
 	    	 links = driver.findElements(By.tagName("a"));
@@ -153,7 +167,8 @@ public class Margin_tradingp
 		        System.out.println("Total number of links: " + linkCount);
 		        assertTrue(linkCount > 0);
 	     }
-	     public void clickonanylinks() {
+	     public void clickonanylinks() throws InterruptedException {
+	    	 Thread.sleep(2000);
 	    	 clickonanylink.click();
 	    	 System.out.println("user should be redirect on respectiv page");
 	    String	textnextpage = clickonanylink.getText();

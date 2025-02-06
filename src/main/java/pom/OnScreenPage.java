@@ -196,19 +196,22 @@ public class OnScreenPage
     	String verify =verifytext.getText();
     	System.out.println("The pop headline title is:" +verify);
     }
-    public void clkarrow() {
+    public void clkarrow() throws InterruptedException {
+    	Thread.sleep(2000);
     	downarrow.click();
     }
-    public void clkhere() {
+    public void clkhere() throws InterruptedException {
     	startTime = System.currentTimeMillis();
     	clkhere.click();
         endTime = System.currentTimeMillis();
         long loadTime = endTime - startTime;
         System.out.println("Pop Up Load time: " + loadTime + " milliseconds");
+        Thread.sleep(2000);
     }
     public void enterquery() throws InterruptedException{
+    	
     	typetext.sendKeys("Please find the attachment");
-    Thread.sleep(1000);
+    Thread.sleep(2000);
     }
     public void ord_attch_file() throws InterruptedException {
     	Attach.click();
@@ -243,8 +246,15 @@ public class OnScreenPage
 		
 		
 	}
-    public void clkraisequeri() {
+    public void clkraisequeri() throws InterruptedException {
+    	try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+		
+			e.printStackTrace();
+		}
 		 button.click();
+		 Thread.sleep(1000);
 	 }
     public void verifymessage() {
     	 String Expected="Query submitted successfully! Kindly refer the Ticket ID - 3008777 for your further reference. You can track the status of it, by visiting the HELP > MY QUERIES tab";
@@ -259,10 +269,12 @@ public class OnScreenPage
     @FindBy(xpath = "//*[text()='Ledger Report - FAQs']")
     private WebElement verifyledger;
     
-    public void clkledger() {
+    public void clkledger() throws InterruptedException {
+    	Thread.sleep(2000);
     	Ledger.click();
     }
-    public void clkonqueri() {
+    public void clkonqueri() throws InterruptedException {
+    	Thread.sleep(2000);
     	Ledgerclk.click();
     }
     public void handlepopup() {
@@ -289,10 +301,12 @@ public class OnScreenPage
     @FindBy(xpath = "//p[text()='Trade History - FAQ']")
     private WebElement verifyTrade;
     
-    public void clkTrade_History() {
+    public void clkTrade_History() throws InterruptedException {
+    	Thread.sleep(2000);
     	Trade_History.click();
     }
-    public void clk_trade_History() {
+    public void clk_trade_History() throws InterruptedException {
+    	Thread.sleep(2000);
     	Trade_history.click();
     }
     public void handle_trade_popup() {
@@ -360,7 +374,8 @@ public class OnScreenPage
     	String verifypage = IPOpage.getText();
     	return verifypage;
     }
-    public void clkIPOrelated() {
+    public void clkIPOrelated() throws InterruptedException {
+    	Thread.sleep(2000);
     	IPOqueries.click();
     }
     

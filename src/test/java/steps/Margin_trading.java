@@ -117,7 +117,7 @@ public class Margin_trading extends propertyReader
 	}
 
 	@Then("The user should navigate to the respective page")
-	public void the_user_should_navigate_to_the_respective_page() {
+	public void the_user_should_navigate_to_the_respective_page() throws InterruptedException {
 		Margin.clickonanylinks();
 	}
 

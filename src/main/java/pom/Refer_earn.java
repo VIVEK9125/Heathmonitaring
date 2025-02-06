@@ -106,10 +106,12 @@ public class Refer_earn
     public void loginbtn() {
     	loginbtn.click();
     }
-    public void clkcontineus() {
+    public void clkcontineus() throws InterruptedException {
+    	Thread.sleep(2000);
     	continuebtn.click();
     }
-    public void clkhamburger() {
+    public void clkhamburger() throws InterruptedException {
+    	Thread.sleep(2000);
     	hamburger.click();
     }
     public void clkRefer_learn() throws InterruptedException {
@@ -247,7 +249,8 @@ public class Refer_earn
     public void leaderboard() {
     	System.out.println("Displayed leaderboard data:"+ leaderboard.getText() );
     }
-    public void clkEmailRep() {
+    public void clkEmailRep() throws InterruptedException {
+    	Thread.sleep(2000);
     	clkEmailRep.click();
     }
     public void verifysuccessfullmsg() {
@@ -262,7 +265,7 @@ public class Refer_earn
     }
     public void ScrollingUp() {
     	try {
-			Thread.sleep(1000);
+			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			
 			e.printStackTrace();
@@ -271,7 +274,7 @@ public class Refer_earn
     }
     public void clkcopyicon() {
     	try {
-			Thread.sleep(1000);
+			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			
 			e.printStackTrace();
@@ -344,7 +347,7 @@ public class Refer_earn
     }
     public void clicksubmit() {
     	try {
-			Thread.sleep(1000);
+			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -364,5 +367,60 @@ public class Refer_earn
 //    	 String verifytitle = verifytext.getText();
 //      	System.out.println("Verify the OTP page Title:"+verifytitle);
     }
+    
+  //***************************************************** Share-link************************************
+    
+    
+    @FindBy(xpath = "//input[@id='txtMobileNo']") private WebElement eNumber;
+    @FindBy(xpath = "//input[@id='GetStarted']") private WebElement startreferral;
+    
+    public void openlink() {
+    	try {
+            // URL to test
+            String OpenlURL = "https://referralapi.mstock.com/Miraereferral/Index/";
+
+            // Start measuring time
+            long startTime = System.currentTimeMillis();
+
+            // Navigate to the page
+            driver.get(OpenlURL);
+            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+
+            // Wait for the page to load completely
+            JavascriptExecutor js=(JavascriptExecutor)driver;
+            while (!js.executeScript("return document.readyState").toString().equals("complete")) {
+                Thread.sleep(100); // Check every 100ms
+            }
+
+            // End measuring time
+            long endTime = System.currentTimeMillis();
+
+            // Calculate load time
+            long loadTime = endTime - startTime;
+            System.out.println("IPO PAGE LOADED IN: " + loadTime + " ms");
+        } catch (InterruptedException e) {
+            System.err.println("ERROR WHILE WAITING FOR THE PAGE TO LOAD: " + e.getMessage());
+        }
+    }
+    public void enternumber() throws InterruptedException {
+    	eNumber.sendKeys("7972160522");
+    	Thread.sleep(2000);
+    }
+    public void clickstartreferral() {
+    	startTime = System.currentTimeMillis();
+    	startreferral.click();
+        // Wait for the page to load or some element to be visible
+       // WebDriverWait wait = new WebDriverWait(driver, 10);
+              //  .until(ExpectedConditions.visibilityOfElementLocated(By.id("result-element")));
+        endTime = System.currentTimeMillis();
+        long loadTime = endTime - startTime;
+        System.out.println("Load time: " + loadTime + " milliseconds");
+    }
+    
+    public void getcurrenturl() {
+    	String verifyurl =driver.getCurrentUrl();
+    	System.out.println("The Current Url Is:"+verifyurl);
+    }
+    
     
 }

@@ -108,12 +108,12 @@ public class OnScreenStep {
 	}
 
 	@When("the user clicks on any arrow in this pop-up")
-	public void the_user_clicks_on_any_arrow_in_this_pop_up() {
+	public void the_user_clicks_on_any_arrow_in_this_pop_up() throws InterruptedException {
 	    OnScreen.clkarrow();
 	}
 
 	@When("the user clicks on the {string} button")
-	public void the_user_clicks_on_the_button(String string) {
+	public void the_user_clicks_on_the_button(String string) throws InterruptedException {
 	  OnScreen.clkhere();
 	}
 
@@ -124,7 +124,7 @@ public class OnScreenStep {
 	}
 
 	@When("clicks on the Raise Query button")
-	public void clicks_on_the_raise_query_button() {
+	public void clicks_on_the_raise_query_button() throws InterruptedException {
 	OnScreen.clkraisequeri();
 	}
 
@@ -139,7 +139,7 @@ public class OnScreenStep {
 	}
 
 	@When("the user clicks on the Ledger Summary.")
-	public void the_user_clicks_on_the_ledger_summary() {
+	public void the_user_clicks_on_the_ledger_summary() throws InterruptedException {
 	  OnScreen.clkledger();
 	}
 
@@ -150,7 +150,7 @@ public class OnScreenStep {
 	}
 
 	@When("the user clicks on the\" Ledger report related queries?\" button.")
-	public void the_user_clicks_on_the_ledger_report_related_queries_button() {
+	public void the_user_clicks_on_the_ledger_report_related_queries_button() throws InterruptedException {
 		try {
 			Thread.sleep(1000);
 		} catch (InterruptedException e) {
@@ -168,12 +168,12 @@ public class OnScreenStep {
 	}
 
 	@When("the user clicks on any arrow in this pop-up1.")
-	public void the_user_clicks_on_any_arrow_in_this_pop_up1() {
+	public void the_user_clicks_on_any_arrow_in_this_pop_up1() throws InterruptedException {
 		 OnScreen.clkarrow();
 	}
 
 	@When("the user clicks on {string} button")
-	public void the_user_clicks_on_button(String string) {
+	public void the_user_clicks_on_button(String string) throws InterruptedException {
 		 OnScreen.clkhere();
 	}
 
@@ -184,7 +184,7 @@ public class OnScreenStep {
 	}
 
 	@When("clicks on Raise Query button.")
-	public void clicks_on_raise_query_button() {
+	public void clicks_on_raise_query_button() throws InterruptedException {
 		OnScreen.clkraisequeri();
 	}
 
@@ -201,7 +201,7 @@ public class OnScreenStep {
 	}
 	
 	@When("the user clicks on the Trade_History page.")
-	public void the_user_clicks_on_the_trade_history_page() {
+	public void the_user_clicks_on_the_trade_history_page() throws InterruptedException {
 		OnScreen.clkTrade_History();
 	   
 	}
@@ -223,12 +223,12 @@ public class OnScreenStep {
 	}
 
 	@When("the user clicks on any arrow on this pop-up1.")
-	public void the_user_clicks_on_any_arrow_on_this_pop_up1() {
+	public void the_user_clicks_on_any_arrow_on_this_pop_up1() throws InterruptedException {
 		OnScreen.clkarrow();
 	}
 
 	@When("the user click on the {string} button")
-	public void the_user_click_on_the_button(String type) {
+	public void the_user_click_on_the_button(String type) throws InterruptedException {
 		OnScreen.clkhere();
 	}
 
@@ -239,7 +239,7 @@ public class OnScreenStep {
 	}
 
 	@When("clicks on the Raise Query buttons.")
-	public void clicks_on_the_raise_query_buttons() {
+	public void clicks_on_the_raise_query_buttons() throws InterruptedException {
 		OnScreen.clkraisequeri();
 	}
 
@@ -281,7 +281,7 @@ public class OnScreenStep {
 	}
 
 	@When("the user click on the {string} button on IPO popup")
-	public void the_user_click_on_the_button_on_ipo_popup(String string) {
+	public void the_user_click_on_the_button_on_ipo_popup(String string) throws InterruptedException {
 		OnScreen.clkhere();
 	}
 
@@ -292,7 +292,7 @@ public class OnScreenStep {
 	}
 
 	@When("clicks on the Raise Query button on IPO popup")
-	public void clicks_on_the_raise_query_button_on_ipo_popup() {
+	public void clicks_on_the_raise_query_button_on_ipo_popup() throws InterruptedException {
 		OnScreen.clkraisequeri();
 	}
 

@@ -120,7 +120,7 @@ public class Pladage_Mstocks
         	
  			//down by specific no of the pixcel
         	 JavascriptExecutor Jv = (JavascriptExecutor)driver;
- 			Jv.executeScript("window.scrollBy(0,1000)");
+ 			Jv.executeScript("window.scrollBy(0,1300)");
       
      }
      public void verifytheWachlist() throws InterruptedException {

@@ -1,7 +1,7 @@
 Feature: Verify the Refer and learn Module
-Background:
+#Background:
    @refer_earn       
-Scenario: Successful Login with Valid Credentials
+    Scenario: Successful Login with Valid Credentials
      Given the user is on the login page
     When the user enters valid credentials
     And clicks the login button
@@ -32,6 +32,12 @@ Scenario: Successful Login with Valid Credentials
     Given User on the Share link
     When the user Entering the number and click on the get otp button
     Then The user Should be redirect on the Enter OTP page
+    
+    @OpenLink
+    Scenario: Verify The Open link page
+    Given User on the Open link
+    When the user Entering the number and click on the Start Referring button
+    Then The user Should redirect on referral page
     
    
     

@@ -14,7 +14,7 @@ public class Login_fail {
 	WebDriver driver = DriverFactory.getDriver();
 	//String cugUrl = "https://trade.mirae-asset.co.in/#/login";
 	@Given("The user is on the login page")
-	public void the_user_is_on_the_login_page() {
+	public void the_user_is_on_the_login_page() throws InterruptedException {
 		login.cugurL();
 		try {
 			Thread.sleep(2000);
@@ -22,11 +22,13 @@ public class Login_fail {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		login.pophandle();
 	}
 
 	@When("the user enters invalid credentials")
 	public void the_user_enters_invalid_credentials() throws InterruptedException {
-		login.pophandle();
+		
+		login.handleAlert();
 	 login.enteruser();
 	 login.enterpassword();
 	}
