@@ -14,7 +14,7 @@ public class Refer_Earn {
 	String URL = "https://trade.mirae-asset.co.in/#/login";
 	 String ReferralURL = "https://ekyc.miraeassetcm.com/Register-with-us?ref=REF1707585%26refsrc=2";
 	
-	@Given("the user is on the login page")
+	@Given("the user is on the logins page")
 	public void the_user_is_on_the_login_page() throws InterruptedException {
 	    driver.get(URL);
 	    
